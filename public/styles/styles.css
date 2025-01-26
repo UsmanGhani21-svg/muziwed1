@@ -2,14 +2,13 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;  /* Light background color */
-    font-family: Arial, sans-serif;
     height: 100%;  /* Ensure full height for both html and body */
+    background: linear-gradient(135deg, #ffb3d9, #ff80cc); /* Lighter gradient colors */
+    font-family: Arial, sans-serif;
 }
 
 /* Header Section */
 .header {
-    background: linear-gradient(135deg, #ff99cc, #ff66b2);  /* Beautiful pink gradient */
     color: white;
     text-align: center;
     padding: 80px 20px;  /* Increased padding for a more spacious header */
@@ -41,7 +40,6 @@ html, body {
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;  /* Adding padding for spacing around the videos */
-    background-color: #f8f8f8;  /* Same background color as body */
 }
 
 /* Individual Video Cards */
@@ -50,8 +48,7 @@ html, body {
     width: 300px;
     height: 200px;
     margin: 15px;
-    background-color: #fff;
-    border: 2px solid #ddd;
+    background: rgba(255, 255, 255, 0.1); /* Transparent overlay effect on gradient */
     border-radius: 15px;  /* Rounded corners for a softer appearance */
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
@@ -77,12 +74,16 @@ html, body {
 /* Content Section */
 .content {
     padding: 20px;
-    background-color: #f8f8f8;  /* Ensuring uniform background color */
 }
 
 /* Additional Styling to Ensure Full Page Background Consistency */
-html, body {
-    height: 100%;  /* Ensure the background color covers the whole page */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send it to the background */
+    background: linear-gradient(135deg, #ffb3d9, #ff80cc); /* Lighter gradient background */
 }
-
-
